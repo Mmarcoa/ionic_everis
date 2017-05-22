@@ -7,7 +7,14 @@
 </ion-header>
 
 <ion-content padding>
-  <p class="error">Respuesta del servicio: {{ serviceResponse }} </p>
+  <ion-list>
+    <li ion-item *ngFor="let p of people">
+      <h2>{{p.name.first}}</h2>
+      <h2>{{p.name.last}}</h2>
+      <p>{{p.email}}</p>
+
+      <img src="{{ p.picture.thumbnail }}">
+  </ion-list>
 
   <p *ngIf="true">ngIf</p>
 </ion-content>
